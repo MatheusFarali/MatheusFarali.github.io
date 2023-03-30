@@ -1,0 +1,115 @@
+.rodape-fundo {
+  background-color: #000;
+  padding: 120px 0px 60px;
+}
+
+.rodape {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.rodape-informacoes,
+.rodape-informacoes a {
+  font-size: 2.25rem;
+  color: #fff;
+}
+
+.rodape-texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 31ch;
+  color: #ccc;
+  align-self: center;
+}
+
+.rodape::after {
+  content: "Farali. Alguns direitos reservados.";
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #8f8f8f;
+  margin-top: 120px;
+}
+
+.rodape-informacoes li {
+  margin-bottom: 20px;
+}
+
+.rodape-informacoes {
+  justify-self: right;
+}
+
+.rodape::before {
+  content: "";
+  display: block;
+  background: url("/img/detalhe.svg") no-repeat center;
+  position: absolute;
+  height: 130px;
+  width: 130px;
+  top: -190px;
+}
+
+@media (max-width: 1230px) {
+  .rodape {
+    margin: 0 50px;
+  }
+  .rodape-informacoes,
+  .rodape-informacoes a {
+    font-size: 2rem;
+    color: #fff;
+  }
+}
+
+@media (max-width: 1040px) {
+  .rodape {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 50px;
+  }
+  .rodape-informacoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 1.8rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .rodape-fundo {
+    padding: 60px 0px 30px;
+  }
+  .rodape-texto {
+    font-size: 1.25rem;
+  }
+  .rodape-informacoes,
+  .rodape-informacoes a {
+    font-size: 1.5rem;
+  }
+  .rodape::after {
+    margin-top: 80px;
+  }
+  .rodape::before {
+    height: 40px;
+    width: 10px;
+    top: -80px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .rodape {
+    margin: 0 25px;
+  }
+  .rodape-texto {
+    font-size: 1rem;
+  }
+  .rodape-informacoes,
+  .rodape-informacoes a {
+    font-size: 1.25rem;
+  }
+  .rodape::after {
+    font-size: 0.6rem;
+    line-height: 1.4;
+  }
+}
